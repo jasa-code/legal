@@ -145,7 +145,7 @@
       <span class="contact">Thomas Lohr</span><br>
       Kontakt: <a href="mailto:just.another.simple.app@gmail.com">just.another.simple.app@gmail.com</a>
     </p>
-    <p>Die vollständige Anbieterkennzeichnung finden Sie im <a href="impressum.html">Impressum</a>.</p>
+    <p>Die vollständige Anbieterkennzeichnung finden Sie im <a href="impressum.html?lang=de">Impressum</a>.</p>
 
     <h2>2. Überblick</h2>
     <p>„Radio – Just Another Radio App" (im Folgenden „die App") spielt frei verfügbare Internet-Radio-Streams ab. Die App verfolgt einen datensparsamen Ansatz: keine Benutzerkonten, keine Werbung, kein Tracking, keine Analyse-Werkzeuge und kein eigenes Backend. Der Entwickler erhebt, speichert oder verarbeitet im Rahmen des Betriebs der App selbst keine personenbezogenen Daten über Sie.</p>
@@ -194,7 +194,7 @@
       <span class="contact">Thomas Lohr</span><br>
       Contact: <a href="mailto:just.another.simple.app@gmail.com">just.another.simple.app@gmail.com</a>
     </p>
-    <p>Full provider identification is available in the <a href="impressum.html">legal notice (Impressum)</a>.</p>
+    <p>Full provider identification is available in the <a href="impressum.html?lang=en">legal notice (Impressum)</a>.</p>
 
     <h2>2. Overview</h2>
     <p>"Radio – Just Another Radio App" (the "app") plays freely available internet radio streams. The app follows a data-minimal approach: no user accounts, no ads, no tracking, no analytics tools, and no backend of our own. In operating the app, the developer does not itself collect, store, or process any personal data about you.</p>
@@ -249,8 +249,15 @@
       : 'Privacy Policy · Radio – Just Another Radio App';
   }
   (function(){
-    var nav = (navigator.language || 'de').toLowerCase();
-    setLang(nav.indexOf('de') === 0 ? 'de' : 'en');
+    var p = new URLSearchParams(location.search).get('lang');
+    var lang;
+    if (p === 'de' || p === 'en') {
+      lang = p;
+    } else {
+      var nav = (navigator.language || 'de').toLowerCase();
+      lang = nav.indexOf('de') === 0 ? 'de' : 'en';
+    }
+    setLang(lang);
   })();
 </script>
 </body>

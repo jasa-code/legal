@@ -116,7 +116,7 @@
     <h2>Hinweis zu Audio-Inhalten und Marken</h2>
     <p>Diese App wird derzeit ohne Werbung und ohne kostenpflichtige Funktionen betrieben. Sie stellt lediglich eine technische Verknüpfung zu öffentlich zugänglichen Radio-Streams Dritter her. Die inhaltliche Verantwortung für die Streams liegt ausschließlich bei den jeweiligen Rundfunkanstalten und Sendern. Sendernamen werden ausschließlich zur Bezeichnung (nominative Nennung) verwendet. Soweit Sendernamen, -logos oder -marken angezeigt werden, verbleiben sämtliche Rechte daran bei den jeweiligen Rechteinhabern. Bei Kenntnis von Rechtsverletzungen werden die betreffenden Verknüpfungen umgehend entfernt.</p>
 
-    <p style="margin-top:28px"><a href="privacy.html">Datenschutzerklärung</a></p>
+    <p style="margin-top:28px"><a href="privacy.html?lang=de">Datenschutzerklärung</a></p>
   </main>
 
   <!-- ========================= ENGLISH ========================= -->
@@ -140,7 +140,7 @@
     <h2>Note on audio content and trademarks</h2>
     <p>This app is currently operated without advertising and without paid features. It merely provides a technical link to publicly available third-party radio streams. Responsibility for the content of the streams lies exclusively with the respective broadcasters and stations. Station names are used solely for identification (nominative use). Insofar as station names, logos, or trademarks are displayed, all rights to them remain with the respective rights holders. On becoming aware of any infringement, the relevant links will be removed promptly.</p>
 
-    <p style="margin-top:28px"><a href="privacy.html">Privacy Policy</a></p>
+    <p style="margin-top:28px"><a href="privacy.html?lang=en">Privacy Policy</a></p>
   </main>
 
 </div>
@@ -160,8 +160,15 @@
       : 'Legal Notice · Radio – Just Another Radio App';
   }
   (function(){
-    var nav = (navigator.language || 'de').toLowerCase();
-    setLang(nav.indexOf('de') === 0 ? 'de' : 'en');
+    var p = new URLSearchParams(location.search).get('lang');
+    var lang;
+    if (p === 'de' || p === 'en') {
+      lang = p;
+    } else {
+      var nav = (navigator.language || 'de').toLowerCase();
+      lang = nav.indexOf('de') === 0 ? 'de' : 'en';
+    }
+    setLang(lang);
   })();
 </script>
 </body>
