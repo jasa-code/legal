@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Impressum · Radio – Just Another Radio App</title>
+<style>
+  :root{
+    --bg:#fbfbfa;
+    --surface:#ffffff;
+    --text:#1c1c1e;
+    --muted:#5b5f66;
+    --accent:#3949AB;
+    --border:#e6e6e3;
+    --maxw:720px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#121316;
+      --surface:#17191d;
+      --text:#e9e9ec;
+      --muted:#9aa0a8;
+      --accent:#8c9bff;
+      --border:#272a30;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    line-height:1.65;
+    font-size:18px;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:40px 22px 80px;}
+  header.top{
+    display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+    gap:12px;border-bottom:1px solid var(--border);padding-bottom:18px;margin-bottom:34px;
+  }
+  .brand{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+    font-weight:700;letter-spacing:.2px;font-size:15px;color:var(--muted);
+  }
+  .brand b{color:var(--accent);}
+  .lang{
+    display:inline-flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;font-size:13px;
+  }
+  .lang button{
+    appearance:none;border:0;background:transparent;color:var(--muted);
+    padding:7px 15px;cursor:pointer;font:inherit;line-height:1;
+  }
+  .lang button[aria-pressed="true"]{background:var(--accent);color:#fff;}
+  h1{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+    font-size:30px;line-height:1.2;margin:0 0 6px;letter-spacing:-.3px;
+  }
+  .updated{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+    color:var(--muted);font-size:14px;margin:0 0 34px;
+  }
+  h2{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+    font-size:19px;color:var(--accent);margin:32px 0 8px;letter-spacing:-.1px;
+  }
+  p{margin:0 0 14px;}
+  a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;}
+  .addr{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+    font-size:16px;line-height:1.9;
+  }
+  .fill{
+    background:rgba(57,73,171,.10);border:1px dashed var(--accent);border-radius:4px;
+    padding:1px 6px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;font-size:.9em;
+  }
+  .note{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+    font-size:13.5px;color:var(--muted);
+  }
+  [hidden]{display:none !important;}
+  @media (max-width:480px){ body{font-size:17px;} h1{font-size:25px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="brand">Radio · <b>Just Another Radio App</b></span>
+    <span class="lang" role="group" aria-label="Language">
+      <button type="button" id="btn-de" aria-pressed="true" onclick="setLang('de')">Deutsch</button>
+      <button type="button" id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+    </span>
+  </header>
+
+  <!-- ========================= DEUTSCH ========================= -->
+  <main id="de">
+    <h1>Impressum</h1>
+    <p class="updated">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+
+    <h2>Diensteanbieter und verantwortlich für den Inhalt</h2>
+    <p class="addr">
+      Thomas Lohr<br>
+      Sunderndorferstraße 9<br>
+      85646 Anzing
+    </p>
+
+    <h2>Kontakt</h2>
+    <p class="addr">
+      E-Mail: <a href="mailto:just.another.simple.app@gmail.com">just.another.simple.app@gmail.com</a><br>
+      Telefon: +49 8121 417887
+    </p>
+
+    <h2>Hinweis zu Audio-Inhalten und Marken</h2>
+    <p>Diese App wird derzeit ohne Werbung und ohne kostenpflichtige Funktionen betrieben. Sie stellt lediglich eine technische Verknüpfung zu öffentlich zugänglichen Radio-Streams Dritter her. Die inhaltliche Verantwortung für die Streams liegt ausschließlich bei den jeweiligen Rundfunkanstalten und Sendern. Sendernamen werden ausschließlich zur Bezeichnung (nominative Nennung) verwendet. Soweit Sendernamen, -logos oder -marken angezeigt werden, verbleiben sämtliche Rechte daran bei den jeweiligen Rechteinhabern. Bei Kenntnis von Rechtsverletzungen werden die betreffenden Verknüpfungen umgehend entfernt.</p>
+
+    <p style="margin-top:28px"><a href="privacy.html">Datenschutzerklärung</a></p>
+  </main>
+
+  <!-- ========================= ENGLISH ========================= -->
+  <main id="en" hidden>
+    <h1>Legal Notice (Impressum)</h1>
+    <p class="updated">Information pursuant to § 5 DDG (German Digital Services Act)</p>
+
+    <h2>Service provider and responsible for content</h2>
+    <p class="addr">
+      Thomas Lohr<br>
+      Sunderndorferstraße 9<br>
+      85646 Anzing
+    </p>
+
+    <h2>Contact</h2>
+    <p class="addr">
+      Email: <a href="mailto:just.another.simple.app@gmail.com">just.another.simple.app@gmail.com</a><br>
+      Phone: +49 8121 417887
+    </p>
+
+    <h2>Note on audio content and trademarks</h2>
+    <p>This app is currently operated without advertising and without paid features. It merely provides a technical link to publicly available third-party radio streams. Responsibility for the content of the streams lies exclusively with the respective broadcasters and stations. Station names are used solely for identification (nominative use). Insofar as station names, logos, or trademarks are displayed, all rights to them remain with the respective rights holders. On becoming aware of any infringement, the relevant links will be removed promptly.</p>
+
+    <p style="margin-top:28px"><a href="privacy.html">Privacy Policy</a></p>
+  </main>
+
+</div>
+
+<script>
+  function setLang(l){
+    var de = document.getElementById('de');
+    var en = document.getElementById('en');
+    var isDe = (l === 'de');
+    de.hidden = !isDe;
+    en.hidden = isDe;
+    document.documentElement.lang = l;
+    document.getElementById('btn-de').setAttribute('aria-pressed', String(isDe));
+    document.getElementById('btn-en').setAttribute('aria-pressed', String(!isDe));
+    document.title = isDe
+      ? 'Impressum · Radio – Just Another Radio App'
+      : 'Legal Notice · Radio – Just Another Radio App';
+  }
+  (function(){
+    var nav = (navigator.language || 'de').toLowerCase();
+    setLang(nav.indexOf('de') === 0 ? 'de' : 'en');
+  })();
+</script>
+</body>
+</html>
