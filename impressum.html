@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<title>Impressum · Radio – Just Another Radio App</title>
+<title>Impressum · Radio – Just Another Simple App</title>
 <style>
   :root{
     --bg:#fbfbfa;
@@ -88,7 +88,7 @@
 <div class="wrap">
 
   <header class="top">
-    <span class="brand">Radio · <b>Just Another Radio App</b></span>
+    <span class="brand">Radio · <b>Just Another Simple App</b></span>
     <span class="lang" role="group" aria-label="Language">
       <button type="button" id="btn-de" aria-pressed="true" onclick="setLang('de')">Deutsch</button>
       <button type="button" id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
@@ -156,8 +156,8 @@
     document.getElementById('btn-de').setAttribute('aria-pressed', String(isDe));
     document.getElementById('btn-en').setAttribute('aria-pressed', String(!isDe));
     document.title = isDe
-      ? 'Impressum · Radio – Just Another Radio App'
-      : 'Legal Notice · Radio – Just Another Radio App';
+      ? 'Impressum · Radio – Just Another Simple App'
+      : 'Legal Notice · Radio – Just Another Simple App';
   }
   (function(){
     var p = new URLSearchParams(location.search).get('lang');
